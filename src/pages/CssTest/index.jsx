@@ -21,7 +21,12 @@ export default function CssTest() {
         <div className={styles.transiton}></div>
       </div>
 
-      <div>transform</div>
+      <div className={styles.transform}>
+        transform
+        <div className={styles.transform_scale}>缩放</div>
+        <div className={styles.transform_rotate}>旋转</div>
+        {/* <div className={styles.transform_translate}>移动</div> */}
+      </div>
     </div>
   );
 }

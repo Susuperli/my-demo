@@ -1,14 +1,12 @@
 import { useState, useRef } from 'react';
-import { RouterProvider } from 'react-router-dom';
-
-import './App.css';
 
 import { throttle } from 'lodash';
+
+import './index.css';
 
 const IMG_URL =
   'https://p3-passport.byteimg.com/img/user-avatar/30417081c4e1df53bc4e22637a02ae26~180x180.awebp';
 const CELL_HEIGHT = 100;
-const BUFFER_LENGTH = 5;
 const TOTAL_HEIGHT = 100 * 10000;
 
 const createDom = (item) => {
@@ -33,7 +31,7 @@ const scrollDom = (list) => {
   });
 };
 
-function App() {
+function VirulScroll() {
   const [scrollList, setScrollList] = useState(cteateDataList().slice(0, 20));
 
   const lastStartIndex = useRef(0);
@@ -66,20 +64,18 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <div
-        className="container"
-        ref={containerRef}
-        onScrollCapture={throttle(onScrollCapture, 16)}
-      >
-        <div className="content" style={{ height: TOTAL_HEIGHT }}>
-          <div style={{ height: topRef.current }} />
-          {scrollDom(scrollList)}
-          <div style={{ height: TOTAL_HEIGHT - topRef.current - 800 }} />
-        </div>
+    <div
+      className="container"
+      ref={containerRef}
+      onScrollCapture={throttle(onScrollCapture, 16)}
+    >
+      <div className="content" style={{ height: TOTAL_HEIGHT }}>
+        <div style={{ height: topRef.current }} />
+        {scrollDom(scrollList)}
+        <div style={{ height: TOTAL_HEIGHT - topRef.current - 800 }} />
       </div>
     </div>
   );
 }
 
-export default App;
+export default VirulScroll;

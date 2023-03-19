@@ -135,3 +135,20 @@
   height: 300px;
   transform: rotate(180deg);
 }
+
+.transform > div {
+  width: 100px;
+  height: 100px;
+  background-color: #999;
+  margin-top: 20px;
+}
+.transform_translate {
+  transform: translate(50px, 100px);
+}
+.transform_rotate {
+  transform: rotate(20deg);
+}
+.transform_scale {
+  transform: scale(0.5, 0.5);
+  background-color: aqua !important;
+}
