@@ -152,3 +152,24 @@
   transform: scale(0.5, 0.5);
   background-color: aqua !important;
 }
+
+.float_container {
+  height: 400px;
+  width: 100%;
+  background-color: #666;
+}
+.left {
+  float: left;
+  width: 200px;
+  height: 400px;
+  background-color: red;
+}
+.right {
+  float: right;
+  width: 100%;
+  height: 400px;
+
+  background-color: blue;
+  height: 400px;
+  overflow: hidden;
+}

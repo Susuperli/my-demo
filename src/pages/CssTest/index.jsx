@@ -27,6 +27,14 @@ export default function CssTest() {
         <div className={styles.transform_rotate}>旋转</div>
         {/* <div className={styles.transform_translate}>移动</div> */}
       </div>
+
+      <div>
+        布局
+        <div className={styles.float_container}>
+          <div className={styles.left}></div>
+          <div className={styles.right}></div>
+        </div>
+      </div>
     </div>
   );
 }
